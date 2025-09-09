@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Developer Portfolio</title>
+    <style>
+        /* Base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Typography */
+        h1, h2, h3 {
+            color: #2d333b;
+            margin-bottom: 16px;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            font-size: 1.8em;
+            margin-top: 30px;
+            color: #0366d6;
+        }
+        
+        p {
+            margin-bottom: 16px;
+        }
+        
+        a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Layout */
+        .container {
+            background-color: white;
+            border-radius: 6px;
+            box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+            padding: 40px;
+            margin-bottom: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background-color: #e1e4e8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 4px solid #0366d6;
+        }
+        
+        .profile-img svg {
+            width: 100px;
+            height: 100px;
+            color: #6a737d;
+        }
+        
+        .contact-info {
+            margin: 25px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .contact-info a {
+            display: flex;
+            align-items: center;
+            padding: 8px 15px;
+            background-color: #f6f8fa;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        
+        .contact-info a:hover {
+            background-color: #e1e4e8;
+            text-decoration: none;
+        }
+        
+        /* Sections */
+        section {
+            margin-bottom: 35px;
+        }
+        
+        .experience-item, .education-item, .project-item {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eaecef;
+        }
+        
+        .experience-item:last-child, .education-item:last-child, .project-item:last-child {
+            border-bottom: none;
+        }
+        
+        .date {
+            color: #6a737d;
+            font-size: 0.95em;
+            margin-bottom: 8px;
+        }
+        
+        /* Skills */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .skill {
+            background-color: #f1f8ff;
+            padding: 6px 14px;
+            border-radius: 16px;
+            font-size: 0.9em;
+            color: #0366d6;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #6a737d;
+            font-size: 0.9em;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            .container {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            .profile-img {
+                width: 140px;
+                height: 140px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-info a {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-img">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="40" r="20" fill="currentColor" />
+                    <circle cx="50" cy="100" r="40" fill="currentColor" />
+                </svg>
+            </div>
+            <h1>Alex Johnson</h1>
+            <p>Full Stack Developer & UI/UX Enthusiast</p>
+            <div class="contact-info">
+                <a href="mailto:alex.johnson@example.com">📧 Email</a>
+                <a href="https://github.com/alexjohnson" target="_blank">🐱 GitHub</a>
+                <a href="https://linkedin.com/in/alexjohnson" target="_blank">💼 LinkedIn</a>
+                <a href="#" onclick="downloadCV()">📄 Download CV</a>
+            </div>
+        </header>
+        
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I'm Alex, a passionate full-stack developer with 5 years of experience building web applications. I specialize in JavaScript technologies including React, Node.js, and Express. I enjoy creating intuitive user experiences and solving complex problems with clean, efficient code.</p>
+            <p>When I'm not coding, you can find me hiking, reading tech blogs, or experimenting with new programming languages and frameworks.</p>
+        </section>
+        
+        <section id="experience">
+            <h2>Work Experience</h2>
+            <div class="experience-item">
+                <h3>Senior Web Developer</h3>
+                <p class="date">January 2021 - Present</p>
+                <p>Tech Innovations Inc., San Francisco, CA</p>
+                <p>Lead development of customer-facing web applications using React and Node.js. Implemented responsive designs that improved mobile conversion rates by 32%. Mentored junior developers and established coding best practices.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Web Developer</h3>
+                <p class="date">June 2018 - December 2020</p>
+                <p>Digital Solutions LLC, Austin, TX</p>
+                <p>Developed and maintained client websites using HTML, CSS, and JavaScript. Collaborated with designers to implement pixel-perfect UIs. Reduced page load times by an average of 40% through performance optimization.</p>
+            </div>
+        </section>
+        
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Bachelor of Science in Computer Science</h3>
+                <p class="date">2014 - 2018</p>
+                <p>University of Texas, Austin, TX</p>
+                <p>Graduated with honors. Relevant coursework: Data Structures, Algorithms, Web Development, Database Systems.</p>
+            </div>
+        </section>
+        
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-list">
+                <span class="skill">JavaScript</span>
+                <span class="skill">React</span>
+                <span class="skill">Node.js</span>
+                <span class="skill">HTML5</span>
+                <span class="skill">CSS3</span>
+                <span class="skill">Express</span>
+                <span class="skill">MongoDB</span>
+                <span class="skill">Git</span>
+                <span class="skill">Responsive Design</span>
+                <span class="skill">RESTful APIs</span>
+                <span class="skill">Python</span>
+                <span class="skill">UI/UX Design</span>
+            </div>
+        </section>
+        
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-item">
+                <h3>TaskFlow App</h3>
+                <p>A productivity application built with React and Firebase that helps teams manage projects and tasks. Features include real-time updates, drag-and-drop functionality, and progress tracking.</p>
+                <p><a href="https://github.com/alexjohnson/taskflow" target="_blank">View on GitHub →</a></p>
+            </div>
+            <div class="project-item">
+                <h3>E-commerce Dashboard</h3>
+                <p>An admin dashboard for e-commerce businesses built with Vue.js and Node.js. Provides analytics, inventory management, and order processing capabilities.</p>
+                <p><a href="https://github.com/alexjohnson/ecom-dashboard" target="_blank">View on GitHub →</a></p>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>© 2023 Alex Johnson. All rights reserved.</p>
+        <p>This portfolio is hosted on GitHub Pages.</p>
+    </footer>
+
+    <script>
+        function downloadCV() {
+            alert("In a real implementation, this would download your CV PDF file.");
+            // Actual implementation would be:
+            // window.open('path/to/your-cv.pdf', '_blank');
+        }
+    </script>
+</body>
+</html>
