@@ -6,3 +6,26 @@
 
 # Amazon Elastic Compute Cloud (EC2) is a web service that provides resizeble compute capacity in the cloud. 
 # It is designed to make web scalling easier for developers.
+
+# Benefits of Amazon Elastic Cloud Copmute
+
+# The simple web service interface of EC2 allows one to configure capacity with minimal friction. it gives you
+# control over your computing resources and lets you run on Amazon's proven computing environment in minutes,
+# reducing the time needed to spawn new server instances quickly enabling you to scale up or down.
+# it also allows user or clients to pay as they go allowing for one to pay for the resources they use
+
+## By the end of this lab, you will be able to:
+
+# Launch a web server with termination protection enabled
+
+# Monitor Your EC2 instance
+
+# Modify the security group that your web server is using to allow HTTP access
+
+# Resize your Amazon EC2 instance to scale
+
+# Test termination protection
+
+# Terminate your EC2 instance
+
+ 
