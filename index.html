@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clive Thato Maduke - Portfolio</title>
     <style>
-        /* Global Styles */
+        /* ===== GLOBAL STYLES ===== */
         * {
             margin: 0;
             padding: 0;
@@ -13,6 +13,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
+        /* Color variables for easy theming */
         :root {
             --primary: #2d2b42;
             --secondary: #4a47a3;
@@ -24,7 +25,7 @@
         }
         
         html {
-            scroll-behavior: smooth;
+            scroll-behavior: smooth; /* Smooth scrolling for navigation */
         }
         
         body {
@@ -33,6 +34,7 @@
             line-height: 1.6;
         }
         
+        /* Container for centered content with max width */
         .container {
             width: 90%;
             max-width: 1200px;
@@ -40,10 +42,12 @@
             padding: 0 15px;
         }
         
+        /* Section spacing */
         section {
             padding: 80px 0;
         }
         
+        /* Section title styling */
         .section-title {
             text-align: center;
             margin-bottom: 50px;
@@ -52,6 +56,7 @@
             position: relative;
         }
         
+        /* Underline effect for section titles */
         .section-title::after {
             content: '';
             position: absolute;
@@ -63,6 +68,7 @@
             background: var(--accent);
         }
         
+        /* Button styling */
         .btn {
             display: inline-block;
             padding: 12px 28px;
@@ -76,13 +82,14 @@
             cursor: pointer;
         }
         
+        /* Button hover effect */
         .btn:hover {
             background: var(--secondary);
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
         
-        /* Header & Navigation */
+        /* ===== HEADER & NAVIGATION ===== */
         header {
             background: var(--primary);
             color: var(--text-light);
@@ -100,6 +107,7 @@
             padding: 20px 0;
         }
         
+        /* Logo styling */
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
@@ -111,6 +119,7 @@
             color: var(--accent);
         }
         
+        /* Navigation links */
         .nav-links {
             display: flex;
             list-style: none;
@@ -131,14 +140,14 @@
             color: var(--accent);
         }
         
-        /* Hero Section */
+        /* ===== HERO SECTION ===== */
         .hero {
             height: 100vh;
             display: flex;
             align-items: center;
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: var(--text-light);
-            margin-top: 70px;
+            margin-top: 70px; /* Account for fixed header */
         }
         
         .hero-content {
@@ -169,6 +178,7 @@
             text-align: center;
         }
         
+        /* Profile image styling */
         .hero-image img {
             max-width: 100%;
             border-radius: 50%;
@@ -176,7 +186,7 @@
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
         }
         
-        /* About Section */
+        /* ===== ABOUT SECTION ===== */
         .about-content {
             display: flex;
             align-items: center;
@@ -198,18 +208,7 @@
             font-size: 1.1rem;
         }
         
-        .about-image {
-            flex: 1;
-            text-align: center;
-        }
-        
-        .about-image img {
-            max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* Skills Section */
+        /* ===== SKILLS SECTION ===== */
         .skills-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -240,7 +239,7 @@
             color: var(--primary);
         }
         
-        /* Projects Section */
+        /* ===== PROJECTS SECTION ===== */
         .projects-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -297,7 +296,7 @@
             margin-bottom: 8px;
         }
         
-        /* Contact Section */
+        /* ===== CONTACT SECTION ===== */
         .contact-container {
             display: flex;
             gap: 50px;
@@ -362,7 +361,7 @@
             resize: vertical;
         }
         
-        /* Footer */
+        /* ===== FOOTER ===== */
         footer {
             background: var(--primary);
             color: var(--text-light);
@@ -395,7 +394,7 @@
             transform: translateY(-5px);
         }
         
-        /* Responsive Design */
+        /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 992px) {
             .hero-content,
             .about-content,
@@ -418,7 +417,7 @@
         
         @media (max-width: 768px) {
             .nav-links {
-                display: none;
+                display: none; /* Hide nav links on mobile */
             }
             
             .section-title {
@@ -432,7 +431,7 @@
     </style>
 </head>
 <body>
-    <!-- Header & Navigation -->
+    <!-- ===== HEADER & NAVIGATION ===== -->
     <header>
         <div class="container">
             <nav>
@@ -448,7 +447,7 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- ===== HERO SECTION ===== -->
     <section id="home" class="hero">
         <div class="container hero-content">
             <div class="hero-text">
@@ -461,12 +460,12 @@
             </div>
             <div class="hero-image">
                 <!-- Profile picture with base64 encoding -->
-                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNDAwIDQwMCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI0MDAiIGZpbGw9IiM0YTQ3YTMiLz48dGV4dCB4PSIyMDAiIHk9IjIwMCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjI0IiBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjM1ZW0iPkNsaXZlJ3MgUGhvdG88L3RleHQ+PC9zdmc+" alt="Clive Maduke">
+                <img src="images/nice.jpeg" alt="Clive Maduke">
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- ===== ABOUT SECTION ===== -->
     <section id="about">
         <div class="container">
             <h2 class="section-title">About Me</h2>
@@ -478,12 +477,12 @@
                     <p>When I'm not exploring new technologies, you can find me working on personal projects, contributing to open source, or expanding my knowledge in cloud computing and web development.</p>
                     <a href="#" class="btn">Download CV</a>
                 </div>
-            
+                <!-- About image section removed as requested -->
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- ===== SKILLS SECTION ===== -->
     <section id="skills" style="background-color: #f8f9fa;">
         <div class="container">
             <h2 class="section-title">My Skills</h2>
@@ -512,11 +511,12 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- ===== PROJECTS SECTION ===== -->
     <section id="projects">
         <div class="container">
             <h2 class="section-title">My Projects</h2>
             <div class="projects-container">
+                <!-- Project 1: Cloud Infrastructure -->
                 <div class="project-card">
                     <div class="project-image">
                         <div style="font-size: 2rem;">☁️</div>
@@ -532,6 +532,8 @@
                         <a href="https://github.com/clivemaduke/cloud-project" class="btn">View Project</a>
                     </div>
                 </div>
+                
+                <!-- Project 2: Portfolio Website -->
                 <div class="project-card">
                     <div class="project-image">
                         <div style="font-size: 2rem;">🌐</div>
@@ -548,11 +550,27 @@
                     </div>
                 </div>
                 
+                <!-- Project 3: Additional project (Data Analysis Tool removed as requested) -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div style="font-size: 2rem;">🚀</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Serverless Application</h3>
+                        <p>A serverless web application using AWS Lambda, API Gateway, and DynamoDB for seamless scalability.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">AWS Lambda</span>
+                            <span class="project-tag">API Gateway</span>
+                            <span class="project-tag">DynamoDB</span>
+                        </div>
+                        <a href="https://github.com/clivemaduke/serverless-app" class="btn">View Project</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- ===== CONTACT SECTION ===== -->
     <section id="contact" style="background-color: #f8f9fa;">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
@@ -561,9 +579,9 @@
                     <h3>Let's talk about opportunities</h3>
                     <p>Feel free to reach out if you're looking for a cloud practitioner, have a question, or just want to connect.</p>
                     <div class="contact-details">
-                        <p><span class="contact-icon">✉️</span> clivet2cool@gmail.com</p>
-                        <p><span class="contact-icon">📱</span> +267 72771403</p>
-                        <p><span class="contact-icon">📍</span> Botswana, Gaborone</p>
+                        <p><span class="contact-icon">✉️</span> clive.maduke@example.com</p>
+                        <p><span class="contact-icon">📱</span> +27 12 345 6789</p>
+                        <p><span class="contact-icon">📍</span> Johannesburg, South Africa</p>
                     </div>
                 </div>
                 <div class="contact-form">
@@ -587,7 +605,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ===== FOOTER ===== -->
     <footer>
         <div class="container">
             <div class="social-links">
@@ -596,12 +614,12 @@
                 <a href="https://twitter.com/clivemaduke" class="social-link">Twitter</a>
                 <a href="https://clivemaduke.github.io" class="social-link">Website</a>
             </div>
-            <p>&copy; 2025 Clive Thato Maduke. All rights reserved.</p>
+            <p>&copy; 2023 Clive Thato Maduke. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Simple JavaScript for navigation highlighting
+        // ===== NAVIGATION HIGHLIGHTING =====
         window.addEventListener('scroll', function() {
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.nav-links a');
@@ -625,7 +643,7 @@
             });
         });
         
-        // Simple form submission handling
+        // ===== FORM SUBMISSION HANDLING =====
         document.querySelector('form').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('Thanks for your message! I will get back to you soon.');
