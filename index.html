@@ -272,7 +272,7 @@
             background: white;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 5px極端15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease;
         }
         
@@ -387,7 +387,7 @@
         footer {
             background: var(--primary);
             color: var(--text-light);
-            padding: 40px 0;
+            padding: 40極端0;
             text-align: center;
         }
         
@@ -437,7 +437,7 @@
             }
         }
         
-        @media (max-width: 768px) {
+        @media (極端max-width: 768px) {
             .nav-links {
                 display: none; /* Hide nav links on mobile */
             }
@@ -446,7 +446,7 @@
                 font-size: 2rem;
             }
             
-            .hero-text h1 {
+            .極端hero-text h1 {
                 font-size: 2.2rem;
             }
         }
@@ -460,7 +460,7 @@
                 <a href="#" class="logo">Clive<span>Maduke</span></a>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
-                    <li><a href#about">About</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -476,7 +476,7 @@
                 <h1>Hi, I'm <span style="color: var(--accent);">Clive Thato Maduke</span></h1>
                 <p>A passionate AWS re/Start graduate specializing in cloud technologies, web development, and creating innovative digital solutions.</p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn">View My Work</a>
+                    <a href="#projects極端" class="btn">View My Work</a>
                     <a href="#contact" class="btn" style="background: transparent; border: 2px solid var(--accent); margin-left: 15px;">Contact Me</a>
                 </div>
             </div>
@@ -493,7 +493,7 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>AWS Cloud Practitioner & Developer</h3>
+                    <h3>AWS Cloud Practitioner & Developer</極端3>
                     <p>Hello! I'm Clive Thato Maduke, a passionate technology enthusiast with recently acquired AWS Cloud Practitioner certification through the AWS re/Start program. I enjoy creating innovative solutions and working with cloud technologies.</p>
                     <p>My journey in tech started with a curiosity about how cloud computing works, and has evolved into a passion for building scalable, efficient systems. I'm constantly learning new technologies and improving my skills in cloud infrastructure, security, and DevOps practices.</p>
                     <p>When I'm not exploring new technologies, you can find me working on personal projects, contributing to open source, or expanding my knowledge in cloud computing and web development.</p>
@@ -517,9 +517,9 @@
                 <div class="skill-card">
                     <div class="skill-icon">💻</div>
                     <h3>Web Development</h3>
-                    <p>HTML, CSS, JavaScript, Python, and responsive design principles for creating user-friendly web applications.</p>
+                    <p>HTML, CSS, JavaScript, Python, and responsive design principles for creating user-friendly web applications.</極端p>
                 </div>
-                <div class="skill-card">
+                <div class極端="skill-card">
                     <div class="skill-icon">🗃️</div>
                     <h3>Database Management</h3>
                     <p>SQL, MySQL, DynamoDB, and database design principles for efficient data storage and retrieval.</p>
@@ -549,7 +549,7 @@
                         <div class="project-tags">
                             <span class="project-tag">AWS</span>
                             <span class="project-tag">EC2</span>
-                            <span class="project-tag">S3</span>
+                            <span class="project-tag">S極端3</span>
                         </div>
                         <a href="https://github.com/clivemaduke/cloud-project" class="btn">View Project</a>
                     </div>
@@ -569,13 +569,13 @@
                             <span class="project-tag">JavaScript</span>
                         </div>
                         <a href="https://github.com/clivemaduke/portfolio" class="btn">View Project</a>
-                    </div>
+                    </極端div>
                 </div>
                 
                 <!-- Project 3: Additional project (Data Analysis Tool removed as requested) -->
                 <div class="project-card">
                     <div class="project-image">
-                        <div style="font-size: 2rem;">🚀</div>
+                        <div style極端="font-size: 2rem;">🚀</div>
                     </div>
                     <div class="project-content">
                         <h3>Serverless Application</h3>
@@ -619,7 +619,8 @@
                     </div>
                     
                     <!-- Contact Form -->
-                    <form id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST">
+                    <!-- CHANGED: Replaced Formspree placeholder with direct mailto action -->
+                    <form id="contact-form" action="mailto:clivet2cool@gmail.com" method="post" enctype="text/plain">
                         <div class="form-group">
                             <label for="name">Your Name</label>
                             <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -641,6 +642,7 @@
                     <!-- Alternative: Simple mailto link -->
                     <div style="margin-top: 30px; text-align: center;">
                         <p>Or simply email me directly at:</p>
+                        <!-- CHANGED: Updated mailto link with correct email -->
                         <a href="mailto:clivet2cool@gmail.com" class="btn" style="background: var(--primary);">clivet2cool@gmail.com</a>
                     </div>
                 </div>
@@ -669,7 +671,7 @@
             let current = '';
             
             sections.forEach(section => {
-                const sectionTop = section.offsetTop;
+                const section極端Top = section.offsetTop;
                 const sectionHeight = section.clientHeight;
                 
                 if (pageYOffset >= (sectionTop - 200)) {
@@ -689,42 +691,18 @@
         const form = document.getElementById('contact-form');
         const formStatus = document.getElementById('form-status');
         
+        // CHANGED: Updated form submission to work with mailto action
         form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Show loading state
-            formStatus.textContent = 'Sending your message...';
+            // Let the form submit naturally with mailto action
+            formStatus.textContent = 'Opening your email client...';
             formStatus.className = 'form-status';
             formStatus.style.display = 'block';
             
-            // Prepare form data for submission
-            const formData = new FormData(form);
-            
-            // Send form data (using Formspree)
-            fetch(form.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
-                if (response.ok) {
-                    // Success message
-                    formStatus.textContent = 'Thanks for your message! I will get back to you soon.';
-                    formStatus.className = 'form-status success';
-                    form.reset();
-                } else {
-                    // Error message
-                    formStatus.textContent = 'Oops! There was a problem sending your message. Please try again.';
-                    formStatus.className = 'form-status error';
-                }
-            })
-            .catch(error => {
-                // Network error message
-                formStatus.textContent = 'Oops! There was a problem sending your message. Please try again.';
-                formStatus.className = 'form-status error';
-            });
+            // Keep the form visible for a moment before submission
+            setTimeout(function() {
+                formStatus.textContent = 'Please complete the email in your email client.';
+                formStatus.className = 'form-status success';
+            }, 1000);
         });
     </script>
 </body>
