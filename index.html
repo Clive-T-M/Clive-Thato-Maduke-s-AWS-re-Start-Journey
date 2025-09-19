@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clive Thato Maduke - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* ===== GLOBAL STYLES ===== */
         * {
@@ -87,6 +88,17 @@
             background: var(--secondary);
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+        }
+        
+        .btn-outline:hover {
+            background: var(--accent);
+            color: var(--text-light);
         }
         
         /* ===== HEADER & NAVIGATION ===== */
@@ -206,6 +218,48 @@
         .about-text p {
             margin-bottom: 15px;
             font-size: 1.1rem;
+        }
+        
+        .education-timeline {
+            margin: 30px 0;
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin-bottom: 25px;
+        }
+        
+        .timeline-icon {
+            min-width: 50px;
+            height: 50px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        .timeline-content {
+            flex: 1;
+        }
+        
+        .timeline-content h4 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+        
+        .timeline-content .date {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .timeline-content p {
+            margin-bottom: 0;
         }
         
         /* ===== SKILLS SECTION ===== */
@@ -418,6 +472,15 @@
             .hero-text h1 {
                 font-size: 2.2rem;
             }
+            
+            .timeline-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .timeline-icon {
+                margin-bottom: 15px;
+            }
         }
     </style>
 </head>
@@ -447,7 +510,7 @@
                      and creating innovative digital solutions.</p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn">View My Work</a>
-                    <a href="#contact" class="btn" style="background: transparent; border: 2px solid var(--accent); margin-left: 15px;">Contact Me</a>
+                    <a href="#contact" class="btn btn-outline" style="margin-left: 15px;">Contact Me</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -464,21 +527,55 @@
             <div class="about-content">
                 <div class="about-text">
                     <h3>AWS Cloud Practitioner & Developer</h3>
-
                     <p>Hello! I'm Clive Thato Maduke, a passionate technology enthusiast with recently 
                         acquired AWS Cloud Practitioner certification through the AWS re/Start program. 
                         I enjoy creating innovative solutions and working with cloud technologies.</p>
-
                     <p>My journey in tech started with a curiosity about how cloud computing works, and has 
-                        evolve into a passion for building scalable, efficient systems. I'm constantly 
+                        evolved into a passion for building scalable, efficient systems. I'm constantly 
                         learning new technologies and improving my skills in cloud infrastructure, security,
                          and DevOps practices.</p>
-
+                    
+                    <!-- Education Timeline -->
+                    <div class="education-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>Computer Systems Engineering</h4>
+                                <div class="date">2015 - 2019</div>
+                                <p>Graduated with a degree in Computer Systems Engineering, focusing on hardware and software integration, system design, and network architecture.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>Postgraduate Certificate in Enterprise Risk Management</h4>
+                                <div class="date">2020 - 2021</div>
+                                <p>Acquired advanced knowledge in identifying, assessing, and managing organizational risks in complex business environments.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>AWS re/Start Program</h4>
+                                <div class="date">2023 - Present</div>
+                                <p>Currently developing cloud skills through AWS re/Start, a full-time, classroom-based skills development and training program that prepares individuals for careers in the cloud.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <p>When I'm not exploring new technologies, you can find me working on personal projects,
                          contributing to open source, or expanding my knowledge in cloud computing and web 
                          development.</p>
 
-                    <a href="#" class="btn">Download CV</a>
+                    <a href="#" class="btn"><i class="fas fa-download"></i> Download CV</a>
                 </div>
                 <!-- About image section removed as requested -->
             </div>
@@ -613,9 +710,9 @@
     <footer>
         <div class="container">
             <div class="social-links">
-                <a href="https://github.com/clivemaduke" class="social-link">GitHub</a>
-                <a href="https://linkedin.com/in/clivemaduke" class="social-link">LinkedIn</a>
-                <a href="https://clivemaduke.github.io" class="social-link">Website</a>
+                <a href="https://github.com/clivemaduke" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/clivemaduke" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="https://clivemaduke.github.io" class="social-link"><i class="fas fa-globe"></i></a>
             </div>
             <p>&copy; 2025 Clive Thato Maduke. All rights reserved.</p>
         </div>
