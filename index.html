@@ -543,6 +543,33 @@
             transform: translateY(-3px);
         }
         
+        /* ===== VISITOR COUNTER STYLES ===== */
+        .visitor-counter {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--accent);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
+            font-size: 0.9rem;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            animation: pulse 2s infinite;
+        }
+        
+        .visitor-counter i {
+            margin-right: 8px;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
         /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 992px) {
             .hero-content,
@@ -592,6 +619,13 @@
             
             .timeline-progress::before {
                 display: none;
+            }
+            
+            .visitor-counter {
+                bottom: 10px;
+                right: 10px;
+                font-size: 0.8rem;
+                padding: 8px 12px;
             }
         }
     </style>
@@ -871,6 +905,12 @@
         </div>
     </footer>
 
+    <!-- ===== VISITOR COUNTER ===== -->
+    <div class="visitor-counter" id="visitorCounter">
+        <i class="fas fa-users"></i>
+        <span id="counterValue">Loading...</span>
+    </div>
+
     <script>
         // ===== NAVIGATION HIGHLIGHTING =====
         window.addEventListener('scroll', function() {
@@ -953,6 +993,76 @@
         
         // Add event listener to the download button
         document.querySelector('.download-section .btn').addEventListener('click', downloadCV);
+        
+        // ===== VISITOR COUNTER FUNCTIONALITY =====
+        // Enhanced visitor counter for GitHub Pages
+        function updateVisitorCounter() {
+            // Create a unique identifier for this visitor
+            function generateVisitorId() {
+                return 'visitor_' + Math.random().toString(36).substr(2, 9) + 
+                       '_' + new Date().getTime().toString(36);
+            }
+            
+            // Get or create visitor ID
+            let visitorId = localStorage.getItem('visitorId');
+            if (!visitorId) {
+                visitorId = generateVisitorId();
+                localStorage.setItem('visitorId', visitorId);
+            }
+            
+            // Get current count and visitors data
+            let count = parseInt(localStorage.getItem('visitorCount')) || 0;
+            let visitorsData = JSON.parse(localStorage.getItem('visitorsData')) || {};
+            let today = new Date().toDateString();
+            
+            // Check if this is a new visit (not in the last 24 hours)
+            let lastVisit = localStorage.getItem('lastVisit');
+            let isNewVisit = lastVisit !== today;
+            
+            if (isNewVisit) {
+                // Increment count if this is a new day
+                count++;
+                localStorage.setItem('visitorCount', count);
+                localStorage.setItem('lastVisit', today);
+                
+                // Update visitors data
+                if (!visitorsData[today]) {
+                    visitorsData[today] = [];
+                }
+                
+                // Only add if this visitor hasn't been counted today
+                if (!visitorsData[today].includes(visitorId)) {
+                    visitorsData[today].push(visitorId);
+                    localStorage.setItem('visitorsData', JSON.stringify(visitorsData));
+                }
+            }
+            
+            // Format the count with commas for better readability
+            const formattedCount = count.toLocaleString();
+            
+            // Update the display with animation
+            const counterElement = document.getElementById('counterValue');
+            counterElement.textContent = formattedCount;
+            
+            // Add a small animation when the counter updates
+            counterElement.style.transform = 'scale(1.2)';
+            setTimeout(() => {
+                counterElement.style.transform = 'scale(1)';
+            }, 300);
+            
+            console.log(`Total unique visitors: ${count}`);
+            console.log(`Your visitor ID: ${visitorId}`);
+        }
+        
+        // Initialize the counter when the page loads
+        document.addEventListener('DOMContentLoaded', updateVisitorCounter);
+        
+        // Optional: Update counter when page becomes visible again
+        document.addEventListener('visibilitychange', function() {
+            if (!document.hidden) {
+                updateVisitorCounter();
+            }
+        });
     </script>
 </body>
 </html>
