@@ -536,11 +536,28 @@
             margin: 0 10px;
             transition: all 0.3s ease;
             text-decoration: none;
+            position: relative;
         }
         
         .social-link:hover {
             background: var(--accent);
             transform: translateY(-3px);
+        }
+        
+        /* Enhanced tooltip styles for social links */
+        .social-link:hover::after {
+            content: attr(title);
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            z-index: 1000;
         }
         
         /* ===== VISITOR COUNTER STYLES ===== */
@@ -690,7 +707,7 @@
                         
                         <div class="timeline-content active" id="step-1">
                             <h4>Computer Systems Engineering</h4>
-                            <span class="date">2016 - 2023</span>
+                            <span class="date">2016 - 2022</span>
                             <p>Graduated with a degree in Computer Systems Engineering, focusing on hardware and software integration, system design, and network architecture.</p>
                             <ul>
                                 <li>Studied computer architecture, networking, and system design</li>
@@ -720,7 +737,7 @@
                         
                         <div class="timeline-content" id="step-3">
                             <h4>AWS re/Start Program</h4>
-                            <span class="date">2025 - Present</span>
+                            <span class="date">2025</span>
                             <p>Currently developing cloud skills through AWS re/Start, a full-time, classroom-based skills development and training program that prepares individuals for careers in the cloud.</p>
                             <ul>
                                 <li>Learning AWS core services and cloud concepts</li>
@@ -762,7 +779,7 @@
                             <i class="fas fa-download"></i> Download CV (PDF)
                         </a>
                         <p style="margin-top: 15px; font-size: 0.9rem; color: #666;">
-                            File size: 245 KB | Last updated: March 2025
+                            File size: 245 KB | Last updated: October 2025
                         </p>
                     </div>
                 </div>
@@ -822,7 +839,7 @@
                             <span class="project-tag">EC2</span>
                             <span class="project-tag">S3</span>
                         </div>
-                        <a href="https://github.com/clivemaduke/cloud-project" class="btn">View Project</a>
+                        <a href="https://github.com/Clive-T-M/cloud-project" class="btn" target="_blank" rel="noopener noreferrer">View Project</a>
                     </div>
                 </div>
                 
@@ -840,7 +857,7 @@
                             <span class="project-tag">CSS</span>
                             <span class="project-tag">JavaScript</span>
                         </div>
-                        <a href="https://github.com/clivemaduke/portfolio" class="btn">View Project</a>
+                        <a href="https://github.com/Clive-T-M/portfolio" class="btn" target="_blank" rel="noopener noreferrer">View Project</a>
                     </div>
                 </div>
                 
@@ -858,7 +875,7 @@
                             <span class="project-tag">API Gateway</span>
                             <span class="project-tag">DynamoDB</span>
                         </div>
-                        <a href="https://github.com/clivemaduke/serverless-app" class="btn">View Project</a>
+                        <a href="https://github.com/Clive-T-M/serverless-app" class="btn" target="_blank" rel="noopener noreferrer">View Project</a>
                     </div>
                 </div>
             </div>
@@ -897,9 +914,15 @@
     <footer>
         <div class="container">
             <div class="social-links">
-                <a href="https://github.com/clivemaduke" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/clivemaduke" class="social-link"><i class="fab fa-linkedin"></i></a>
-                <a href="https://clivemaduke.github.io" class="social-link"><i class="fas fa-globe"></i></a>
+                <a href="https://github.com/Clive-T-M" class="social-link" target="_blank" rel="noopener noreferrer" title="Visit my GitHub profile">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/clive-maduke-a80a9a369" class="social-link" target="_blank" rel="noopener noreferrer" title="Connect on LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://clivemaduke.github.io" class="social-link" target="_blank" rel="noopener noreferrer" title="Visit my website">
+                    <i class="fas fa-globe"></i>
+                </a>
             </div>
             <p>&copy; 2025 Clive Thato Maduke. All rights reserved.</p>
         </div>
