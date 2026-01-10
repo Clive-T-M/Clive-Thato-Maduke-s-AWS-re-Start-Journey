@@ -1,6 +1,6 @@
 ## Page 1
 
-nextwork.org  Cloud Security with AWS IAM  Clive Maduke
+Cloud Security with AWS IAM  Clive Maduke
 
 ## Page 2
 
@@ -12,7 +12,7 @@ Clive Maduke  NextWork Student   nextwork.org  Tags  What I did in this step  In
 
 ## Page 4
 
-Clive Maduke  NextWork Student   nextwork.org
+Clive Maduke  
 
 ## Page 5
 
@@ -20,7 +20,7 @@ Clive Maduke  NextWork Student   nextwork.org  IAM Policies  What I did in this 
 
 ## Page 6
 
-Clive Maduke  NextWork Student   nextwork.org  My JSON Policy
+Clive Maduke  My JSON Policy
 
 ## Page 7
 
@@ -28,7 +28,7 @@ Clive Maduke  NextWork Student   nextwork.org  Account Alias  What I did in this
 
 ## Page 8
 
-Clive Maduke  NextWork Student   nextwork.org
+Clive Maduke  
 
 ## Page 9
 
@@ -40,8 +40,7 @@ Clive Maduke  NextWork Student   nextwork.org  Logging in as an IAM User  Sharin
 
 ## Page 11
 
-Clive Maduke  NextWork Student   nextwork.org
-
+Clive Maduke  
 ## Page 12
 
 Clive Maduke  NextWork Student   nextwork.org  Testing IAM Policies  What I did in this step  In this step, I will login to own AWS account as the intern and test access to the production and development instances because I have to make sure the intern has been given the right permissions and that the can not affect our production environment.  Testing policy actions  I tested my JSON IAM policy by attempting to stop both the development and [roduction instences  Stopping the production instance  When I tried to stop the production instance I encountered an error. This was because our production instance is tagged with the production label which is out of the scope of our permission policy. interns are only allowed to do things to the development instances.
@@ -54,11 +53,5 @@ Clive Maduke  NextWork Student   nextwork.org  Stopping the development instance
 
 Clive Maduke  NextWork Student   nextwork.org  IAM Policy Simulator  To extend my project, I'm going to test our permissions policies in safer and more controlled way using a tool called IAM poliy si,uater ... I'm doing this because... having to change accounts and stopping resources can be disruptive to other users  Understanding the IAM Policy Simulator  The IAM Policy Simulator is a tool that lets one simulat actions and test permission settings by defining a specific user, group or role and action we want to test for ... It's useful for saving time because one does not need to log in as another user to test out the permissions or stopping resources...  How I used the simulator  I set up a simulation for.whether our users can access certain permissions to stop instances and delete tags. The results were.. denied for both. I had to adjust the scope to EC2 instances to once that are tagged with development. Once we applied that tag, permission was allowed
 
-## Page 15
 
-Clive Maduke  NextWork Student   nextwork.org
-
-## Page 16
-
-nextwork.org  The place to learn & showcase your skills Check out   nextwork.org   for more projects
 
